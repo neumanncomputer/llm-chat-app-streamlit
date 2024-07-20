@@ -9,6 +9,7 @@
 - poetry 環境
 
 ```bash
+pyenv local
 poetry install
 ```
 
