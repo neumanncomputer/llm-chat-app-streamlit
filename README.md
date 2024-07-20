@@ -5,6 +5,7 @@
 # Requirement
 
 - Python 3.11
+- pyenv環境
 - poetry 環境
 
 ```bash
