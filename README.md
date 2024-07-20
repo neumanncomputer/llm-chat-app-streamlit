@@ -21,3 +21,14 @@ poetry install
 poetry shell
 streamlit run app.py
 ```
+
+# Azure　の App Serviceへデプロイ
+
+```bash
+poetry export -f requirements.txt -o requirements.txt --without-hashes
+```
+- equirements.txtを読んで pip でパッケージをインストールするセットアップをしてもらう必要があります。この動作は構成で行います。アプケーション設定に`SCM_DO_BUILD_DURING_DEPLOYMENT`というKEYを作り、値にtrueまたは1をセットします。
+- 全般設定のスタートアップ コマンドに以下を設定
+```bash
+python -m streamlit run app.py --server.port 8000 --server.address 0.0.0.0
+```
